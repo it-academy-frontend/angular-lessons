@@ -1,0 +1,60 @@
+<p>lesson2 works!</p>
+<!-- <hr>
+<button (click)="addMessage($event)">add message</button>
+<p>Message: {{ message }}</p>
+<hr>
+<button (click)="show()">show</button>
+<h2 class="text" [class.show]="isShow">Some text</h2>
+<h2 class="text" [class]="{'show': isShow}">Some text</h2>
+<hr>
+<h3 [style.color]="isShow ? 'red' : 'green'">hello</h3>
+<h3 [style.width]="someWidth">hello</h3>
+<h3 [style.width.px]="someWidth2">hello</h3>
+<hr>
+<input type="text" [(ngModel)]="login" name="login">
+<input type="text" [(ngModel)]="login" name="login1">
+<p>User: {{ login }}</p>
+<button (click)="showUser()">showUser</button>
+<hr> -->
+
+<!-- Directive
+    1. Component
+    2. Структурні
+    3. Антрибутивні
+-->
+
+<!-- Структурні -->
+<!-- *ngIf="expression" -->
+<button (click)="show()">show</button>
+<h3 class="blue" *ngIf="isShow">check ngIf</h3>
+<!-- <h3>
+    <ng-container *ngIf="isShow; else elseTemplate">
+        <span>some text</span>
+    </ng-container>
+</h3>
+<ng-template #elseTemplate>
+    other text
+</ng-template> -->
+
+<!-- <h3>
+    <ng-container *ngIf="isShow">
+        <span>some text</span>
+    </ng-container>
+    <ng-container *ngIf="!isShow">
+        <span>some text 2</span>
+    </ng-container>
+</h3> -->
+
+<!-- *ngFor="let item of items" -->
+<hr>
+<input type="text" [(ngModel)]="newName">
+<input *ngIf="!isEdit" type="button" value="add" (click)="addName()" [disabled]="!newName">
+<input *ngIf="isEdit" type="button" value="save" (click)="updateName()" [disabled]="!newName">
+<ul>
+    <li *ngFor="let name of arrNames; let i = index">
+        <span>{{ i+1 }}. {{ name }}</span> 
+        <button (click)="deleteName(i)">delete</button>
+        <button (click)="editName(i)">edit</button>
+    </li>
+</ul>
+

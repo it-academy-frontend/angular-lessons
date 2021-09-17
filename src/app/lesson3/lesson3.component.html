@@ -1,0 +1,30 @@
+<!-- <p>lesson3 works!</p>
+<table class="table">
+    <thead>
+        <th>#</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Status</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of arrUsers; index as i; count as allCount">
+            <td>{{ i + 1 }}/{{ allCount }}</td>
+            <td>{{ user.name }}</td>
+            <td>{{ user.age }}</td>
+            <td>
+                <input type="checkbox" (change)="changeStatus(user)" [checked]="user.status">
+                <span [ngStyle]="{'color': user.status ? 'green' : 'red'}">{{ user.status ? 'done' : 'fail' }}</span>
+            </td>
+        </tr>
+    </tbody>
+</table> -->
+
+<!-- <h3>Message: {{ childMessage }}</h3> -->
+
+<!-- <ng-content></ng-content> -->
+<!-- 
+<input type="number" [(ngModel)]="numb">
+<button (click)="sendOutputData()">sendOutputData</button> -->
+
+<button (click)="changeNumber(false)">-</button>
+<button (click)="changeNumber(true)">+</button>
